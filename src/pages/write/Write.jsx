@@ -1,9 +1,11 @@
 import React from 'react'
 import "./write.css"
+import PIC from '../../images/three-star-tft.JPG'
 
 export default function Write() {
   return (
     <div className='write'>
+        <img src= {PIC} alt="" className="writeImg" />
         <form className="writeForm">
             <div className="writeFormGroup">
                 <label htmlFor="fileInput">
