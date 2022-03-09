@@ -6,7 +6,6 @@ const bcrypt = require('bcrypt');
 
 router.post("/register", async (req, res) => {
     try {
-
         const salt = await bcrypt.genSalt(10);
         const hashedPass = await bcrypt.hash(req.body.password, salt)
         const newUser = new User({
@@ -30,8 +29,8 @@ router.post("/login", async (req, res) => {
         const validated = await bcrypt.compare(req.body.password, user.password)
         !validated && res.status(400).json("Invalid Password.")
 
-        const { password, ...others } = user;
-        res.status(200).json(user);
+        const { password, ...others } = user._doc;
+        res.status(200).json(others);
     } catch (err) {
         res.status(500).json(err)
     }
