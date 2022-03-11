@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 import "./navbar.css"
 import PROFPIC from "../../images/Octocat.png"
-export default function navbar() {
-    const user = false;
+import { useContext } from "react";
+import { Context } from "../../context/Context";
+
+export default function Navbar() {
+    const { user, dispatch } = useContext(Context);
+    const handleLogout = () => {
+        dispatch({ type: "LOGOUT" })
+    }
+    const PF = "http://localhost:5000/imgs/"
     return (
         <div className="navBar">
             <div className="navBarLeft">
@@ -19,11 +26,11 @@ export default function navbar() {
                     <li className="navBarListItem"><Link className="link" to="/about">ABOUT</Link></li>
                     <li className="navBarListItem"><Link className="link" to="/contact">CONTACT</Link></li>
                     <li className="navBarListItem"><Link className="link" to="/write">WRITE</Link></li>
-                    <li className="navBarListItem">{user && "LOGOUT"}</li>
+                    <li className="navBarListItem" onClick={ handleLogout }>{user && "LOGOUT"}</li>
                 </ul>
             </div>
             <div className="navBarRight">
-                {user ? (<img className="navBarImg" src={PROFPIC} alt="" />)
+                {user ? (<Link to="/settings"><img className="navBarImg" src = { PF + user.profilePic } alt="" /></Link>)
                     : (
                         <ul className="navBarList">
                             <li className="navBarListItem">

@@ -14,7 +14,6 @@ router.post("/", async (req, res) => {
 })
 
 // UPDATE POST 
-
 router.put("/:id", async (req, res) => {
     try {
         const post = await Post.findById(req.params.id)
@@ -58,8 +57,7 @@ router.delete("/:id", async (req, res) => {
     }
 })
 
-// GET POST
-
+// FIND POST
 router.get("/:id", async (req, res) => {
     try {
         const post = await Post.findById(req.params.id);
@@ -70,7 +68,7 @@ router.get("/:id", async (req, res) => {
     }
 })
 
-// GET ALL THE POSTS WITHIN SPECIFIED CATEGORY
+// FIND ALL THE POSTS WITHIN SPECIFIED CATEGORY
 router.get("/", async (req, res) => {
     const username = req.query.user;
     const category = req.query.cat;

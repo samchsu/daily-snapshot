@@ -6,8 +6,8 @@ const {
     update
 } = require("../models/User");
 
-// Update
-// param: userId
+// UPDATE USER INFO
+// Body: userId
 router.put("/:id", async (req, res) => {
     if (req.body.userId === req.params.id) {
         if (req.body.password) {
@@ -19,7 +19,7 @@ router.put("/:id", async (req, res) => {
                 $set: req.body,
             }, {
                 new: true
-            }) // sends updated username in JSON format to user
+            }) // Sends updated username in JSON format to user
             res.status(200).json(updatedUser);
         } catch (err) {
             res.status(500).json(err)
@@ -29,8 +29,8 @@ router.put("/:id", async (req, res) => {
     }
 })
 
-// DELETE 
-
+// DELETE USER
+// Body: userId
 router.delete("/:id", async (req, res) => {
     if (req.body.userId === req.params.id) {
         try {
@@ -53,7 +53,7 @@ router.delete("/:id", async (req, res) => {
 })
 
 // GET - Find Specific User
-
+// Body: userId
 router.get("/:id", async (req, res) => {
     try {
         const user = await User.findById(req.params.id);
