@@ -12,7 +12,7 @@ export default function Settings() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [success, setSuccess] = useState(false)
-    const PF = "https://daily-snapshot-api.herokuapp.com/imgs/"
+    const PF = "https://daily-snapshot-api.herokuapp.com/api/imgs/"
 
     const handleSubmit = async(e) => {
         e.preventDefault();
@@ -30,13 +30,13 @@ export default function Settings() {
             data.append("file", file)
             updatedUser.profilePic = filename
             try {
-                await axios.post("/upload", data)
+                await axios.post("https://daily-snapshot-api.herokuapp.com/api/upload", data)
             } catch (err) {
                 
             }
         }
         try {
-            const res = await axios.put("/users/"+user._id, updatedUser);
+            const res = await axios.put("https://daily-snapshot-api.herokuapp.com/api/users/"+user._id, updatedUser);
             setSuccess(true)
             dispatch({type:"SUCCESS_UPDATE", payload: res.data})
         } catch (err) {
