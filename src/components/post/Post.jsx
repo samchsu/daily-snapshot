@@ -1,7 +1,7 @@
 import "./post.css"
 import {Link} from "react-router-dom"
 export default function Post({ post }) {
-    const ProfPic = "http://localhost:5000/imgs/"
+    const ProfPic = "https://daily-snapshot-backend.herokuapp.com/imgs/"
     return (
         <div className="post">
             {post.photo && (

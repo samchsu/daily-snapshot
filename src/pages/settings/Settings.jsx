@@ -12,7 +12,7 @@ export default function Settings() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [success, setSuccess] = useState(false)
-    const PF = "http://localhost:5000/imgs/"
+    const PF = "https://daily-snapshot-backend.herokuapp.com/imgs/"
 
     const handleSubmit = async(e) => {
         e.preventDefault();

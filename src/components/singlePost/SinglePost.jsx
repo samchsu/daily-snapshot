@@ -9,7 +9,7 @@ export default function SinglePost() {
     const location = useLocation()
     const path = (location.pathname.split("/")[2])
     const [post, setPost] = useState({})
-    const ProfPic = "http://localhost:5000/imgs/"
+    const ProfPic = "https://daily-snapshot-backend.herokuapp.com/imgs/"
     const { user } = useContext(Context)
     const [title, setTitle] = useState("")
     const [desc, setDesc] = useState("")

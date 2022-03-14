@@ -8,7 +8,7 @@ export default function Navbar() {
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" })
     }
-    const PF = "http://localhost:5000/imgs/"
+    const PF = "https://daily-snapshot-backend.herokuapp.com/imgs/"
     return (
         <div className="navBar">
             <div className="navBarLeft">
