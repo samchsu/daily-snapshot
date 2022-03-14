@@ -28,7 +28,7 @@ export default function SinglePost() {
     const handleDelete = async () =>
     {
         try {
-            await axios.delete(`/posts/${post._id}`, {
+            await axios.delete(`https://daily-snapshot-api.herokuapp.com/api/posts/${post._id}`, {
                 data: {username: user.username}})
             window.location.replace("/")
         } catch (err) {
@@ -38,7 +38,7 @@ export default function SinglePost() {
     
     const handleUpdate = async () => {
         try {
-            await axios.put(`/posts/${post._id}`, {
+            await axios.put(`https://daily-snapshot-api.herokuapp.com/api/posts/${post._id}`, {
                 username: user.username, title, desc})
             setUpdateMode(false)
         } catch (err) {
