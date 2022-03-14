@@ -1,4 +1,3 @@
-import Sidebar from '../../components/sidebar/Sidebar'
 import './settings.css'
 import PIC from '../../images/cloudy.JPEG'
 import { useContext, useState } from 'react'

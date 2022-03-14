@@ -1,9 +1,9 @@
 import './about.css';
 import { useState, useEffect } from "react";
-import Sidebar from '../../components/sidebar/Sidebar';
+import AboutMe from '../../components/about-me/About';
 
 export default function About() {
   return (
-    <Sidebar />
+    <AboutMe />
   )
 }

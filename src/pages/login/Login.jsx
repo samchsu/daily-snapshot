@@ -35,7 +35,7 @@ export default function Login() {
             <label>Password</label>
             <input type="password" className="loginInput" placeholder='Enter your password...' ref={pwdRef}/> 
             <button className='loginButton' type="submit" disabled={isFetching}>Login</button>  
-            {error && <span style={{color: "red"}}> Username or password invalid. Please check credentials and try again.</span>} 
+            {error && <span style={{color: "red"}}> Username or password invalid. <br/>Please check credentials and try again.</span>} 
         </form>  
         <button className='loginRegisterButton'>
           <Link className='link' to="/register">Register</Link>

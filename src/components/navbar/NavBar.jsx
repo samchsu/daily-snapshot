@@ -12,9 +12,9 @@ export default function Navbar() {
     return (
         <div className="navBar">
             <div className="navBarLeft">
-                <i className="navBarIcon fa-brands fa-github"></i>
-                <i className="navBarIcon fa-brands fa-linkedin"></i>
-                <i className="navBarIcon fa-brands fa-instagram"></i>
+                <a className="navBarIcon fa-brands fa-github" href="https://www.github.com/samchsu"></a>
+                <a className="navBarIcon fa-brands fa-linkedin" href="https://www.linkedin.com/in/samuel-hsu/"></a>
+                <a className="navBarIcon fa-brands fa-instagram" href="https://www.instagram.com/samuel.hsu"></a>
             </div>
             <div className="navBarCenter">
                 <ul className="navBarList">
