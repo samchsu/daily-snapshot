@@ -39,7 +39,7 @@ export default function Register() {
         <button className='registerButton' type="submit">Register</button>
       </form>
       <Link className='registerLoginButton' to="/login">Have an account? Login here</Link>
-      {error && <span style={{color: "red"}}> Something went wrong. Please check credentials and try again.</span>}
+      {error && <span style={{color: "red"}}> Username or Email already taken. Please choose another and try again.</span>}
     </div>
   )
 }
