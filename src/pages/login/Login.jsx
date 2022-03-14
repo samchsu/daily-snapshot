@@ -22,6 +22,7 @@ export default function Login() {
     })
     .catch((err) => {
       dispatch({type: "FAILURE_LOGIN"})
+      console.log(err)
     })
   }
 
