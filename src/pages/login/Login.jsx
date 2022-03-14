@@ -13,15 +13,16 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({type: "START_LOGIN"})
-    try {
-      const res = await axios.post("https://daily-snapshot-api.herokuapp.com/api/auth/login", {
-        username: userRef.current.value,
-        password: pwdRef.current.value,
-      })
+    const res = await axios.post("https://daily-snapshot-api.herokuapp.com/api/auth/login", {
+      username: userRef.current.value,
+      password: pwdRef.current.value,
+    })
+    .then((res) => {
       dispatch({type: "SUCCESS_LOGIN", payload: res.data})
-    } catch(err) {
+    })
+    .catch((err) => {
       dispatch({type: "FAILURE_LOGIN"})
-    }
+    })
   }
 
   return (
