@@ -22,7 +22,7 @@ export default function Navbar() {
                         <Link className="link" to="/">HOME</Link>
                     </li>
                     <li className="navBarListItem"><Link className="link" to="/about">ABOUT</Link></li>
-                    <li className="navBarListItem"><Link className="link" to="/contact">CONTACT</Link></li>
+                    {/* <li className="navBarListItem"><Link className="link" to="/contact">CONTACT</Link></li> */}
                     <li className="navBarListItem"><Link className="link" to="/write">WRITE</Link></li>
                     <li className="navBarListItem" onClick={ handleLogout }>{user && "LOGOUT"}</li>
                 </ul>

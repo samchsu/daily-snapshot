@@ -13,6 +13,19 @@ export default function Settings() {
     const [success, setSuccess] = useState(false)
     const PF = "https://daily-snapshot-api.herokuapp.com/imgs/"
 
+    const handleDelete = async () =>
+    {
+        try {
+            await axios.delete(`https://daily-snapshot-api.herokuapp.com/api/users/${user._id}`, {
+                userId: user._id, username: user.username, password: user.password})
+            window.location.replace("/")
+            console.log("delete");
+            dispatch({ type: "LOGOUT" })
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
     const handleSubmit = async(e) => {
         e.preventDefault();
         dispatch({type:"START_UPDATE"})
@@ -49,7 +62,7 @@ export default function Settings() {
                 <span className="settingsUpdateTitle">
                     Update Account    
                 </span>    
-                <span className="settingsDeleteTitle">
+                <span className="settingsDeleteTitle" onClick= {handleDelete}>
                     Delete Account    
                 </span>    
             </div>
