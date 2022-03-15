@@ -17,7 +17,7 @@ export default function Settings() {
     {
         try {
             await axios.delete(`https://daily-snapshot-api.herokuapp.com/api/users/${user._id}`, {
-                userId: user._id, username: user.username, password: user.password})
+                data: {userId: user._id, username: user.username, password: user.password}})
             window.location.replace("/")
             console.log("delete");
             dispatch({ type: "LOGOUT" })
