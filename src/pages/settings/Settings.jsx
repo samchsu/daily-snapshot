@@ -6,8 +6,8 @@ import { Context } from '../../context/Context'
 export default function Settings() {
     const { user, dispatch } = useContext(Context)
     const [file, setFile] = useState(null)
-    const [username, setUsername] = useState("")
-    const [email, setEmail] = useState("")
+    const [username, setUsername] = useState(user.username)
+    const [email, setEmail] = useState(user.email)
     const [password, setPassword] = useState("")
     const [success, setSuccess] = useState(false)
     const PF = "https://daily-snapshot-api.herokuapp.com/imgs/"
@@ -75,9 +75,9 @@ export default function Settings() {
                     <input type="file" id="fileInput" style={{display:"none"}} onChange = {(e) => setFile(e.target.files[0])}/>
                 </div>
                 <label>Username</label>
-                <input type="text" placeholder="Change username here" value={user.username} onChange={e => setUsername(e.target.value)}></input>
+                <input type="text" placeholder="Change username here" value={username} onChange={e => setUsername(e.target.value)}></input>
                 <label>Email</label>
-                <input type="email" placeholder="Change email here" value={user.email} onChange={e => setEmail(e.target.value)}></input>
+                <input type="email" placeholder="Change email here" value={email} onChange={e => setEmail(e.target.value)}></input>
                 <label>Password</label>
                 <input type="password" onChange={e => setPassword(e.target.value)}/>
                 <button className="settingsSubmit" type="submit">Update</button>
