@@ -38,7 +38,7 @@ export default function Navbar() {
                                 <Link className="link" to="/register">REGISTER</Link>
                             </li>
                         </ul>)}
-                <i className="navBarSearchIcon fa-solid fa-magnifying-glass"></i>
+                {/* <i className="navBarSearchIcon fa-solid fa-magnifying-glass"></i> */}
             </div>
 
 

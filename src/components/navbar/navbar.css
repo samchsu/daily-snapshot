@@ -32,27 +32,28 @@
 }
 
 .navBarCenter {
-    flex: 6;
+    flex: 12;
 }
 
 .navBarList {
+
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin-left: 40px;
     padding: 0;
     list-style: none;
+    column-gap: 50px;
 }
 
 .navBarListItem {
-    margin-right: 20px;
     font-size: 18px;
     font-weight: 300;
     cursor: pointer;
 }
 
-.navBarSearchIcon {
+/* .navBarSearchIcon {
     font-size: 18px;
     color: #666;
     cursor: pointer;
     margin-left: 15px;
-}
+} */
