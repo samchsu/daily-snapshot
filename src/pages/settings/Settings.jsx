@@ -1,5 +1,4 @@
 import './settings.css'
-import PIC from '../../images/cloudy.JPEG'
 import { useContext, useState } from 'react'
 import axios from 'axios'
 import { Context } from '../../context/Context'

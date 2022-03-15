@@ -48,7 +48,7 @@ export default function SinglePost() {
     return (
         <div className='singlePost'>
             <div className="singlePostWrapper"> 
-                {post.photo && <img src={ProfPic + post.photo} alt="Image" className="singlePostImg" />}{
+                {post.photo && <img src={ProfPic + post.photo} alt="" className="singlePostImg" />}{
                     updateMode ? (
                         <input type="text" value={title} className="singlePostTitleInput" autoFocus={true}
                         onChange={(e) => setTitle(e.target.value)}

@@ -1,7 +1,5 @@
 import "./about.css"
 import PIC from "../../images/me.jpg"
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function About() {
   
@@ -13,9 +11,9 @@ export default function About() {
       </div>
       <div className="aboutItem">
         <div className="aboutSocial">
-          <a className="navBarIcon fa-brands fa-github" href="https://www.github.com/samchsu"></a>
-          <a className="navBarIcon fa-brands fa-linkedin" href="https://www.linkedin.com/in/samuel-hsu/"></a>
-          <a className="navBarIcon fa-brands fa-instagram" href="https://www.instagram.com/samuel.hsu"></a>
+          <a className="navBarIcon fa-brands fa-github" href="https://www.github.com/samchsu"> </a>
+          <a className="navBarIcon fa-brands fa-linkedin" href="https://www.linkedin.com/in/samuel-hsu/"> </a>
+          <a className="navBarIcon fa-brands fa-instagram" href="https://www.instagram.com/samuel.hsu"> </a>
       </div>
       </div>
     </div>

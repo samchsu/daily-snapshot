@@ -11,10 +11,8 @@ import { Context } from "./context/Context";
 
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Routes,
-  Link
+  Routes
 } from "react-router-dom";
 
 function App() {
